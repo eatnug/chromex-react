@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (isOff) {
       isOff = false;
       let iframe = document.createElement("iframe");
-      iframe.id = "frame";
+      iframe.id = "chromex-frame";
       iframe.src = chrome.runtime.getURL("index.html");
       iframe.style.zIndex = 201501178
       iframe.style.position = "fixed"
@@ -14,7 +14,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       document.body.appendChild(iframe);
     } else {
       isOff = true;
-      document.getElementById("later-frame").remove();
+      document.getElementById("chromex-frame").remove();
     }
   }
 });
