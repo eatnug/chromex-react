@@ -11,10 +11,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       iframe.style.right = "0px"
       iframe.style.top = "0px"
       iframe.style.height = "100vh"
-      document.body.appendChild(iframe);
+      top.document.body.appendChild(iframe);
     } else {
       isOff = true;
-      document.getElementById("chromex-frame").remove();
+      parent.document.getElementById("chromex-frame").remove();
     }
   }
 });
